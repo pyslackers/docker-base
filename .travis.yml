@@ -1,0 +1,11 @@
+services:
+  - docker
+
+script:
+  - docker build -t pyslackers/python:3.6-alpine .
+
+deploy:
+  provider: script
+  script: scripts/deploy.sh
+  on:
+    branch: master
