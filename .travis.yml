@@ -2,7 +2,7 @@ services:
   - docker
 
 script:
-  - docker build -t pyslackers/python:3.6-alpine .
+  - docker build -t pyslackers/python:3.6-alpine-latest -t pyslackers/python:3.6-alpine-${TRAVIS_BUILD_NUMBER} .
 
 deploy:
   provider: script
